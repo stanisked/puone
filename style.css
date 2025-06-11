@@ -1,80 +1,97 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  background: #34b5e5;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+img#preview {
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .tabs {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    background: #eee;
-  }
-  
-  .tabs button {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    background: #ddd;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .tab {
-    display: none;
-    padding: 20px;
-  }
-  
-  .tab.active {
-    display: block;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-  }
-  .chat-card {
-    padding: 10px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  .chat-card:hover {
-    background: #f0f0f0;
-  }
-  .interests-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 8px;
-    margin: 10px 0;
-  }
-  
-  .interest-btn {
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: white;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  
-  .interest-btn:hover {
-    background: #f0f0f0;
-  }
-  
-  .interest-btn.selected {
-    background: #4CAF50;
-    color: white;
-  }
-  .loading {
-    text-align: center;
-    padding: 20px;
-    color: #666;
-  }
-  
-  .card {
-    transition: transform 0.2s;
-  }
-  .card:hover {
-    transform: scale(1.02);
-  }
-    
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: #eee;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: #34b5e5;
+  color: #fff;
+}
+.user-card {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.08);
+}
+
+.user-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.user-card .info {
+  flex: 1;
+}
