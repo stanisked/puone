@@ -51,6 +51,19 @@ bot.onText(/\/profile/, async (msg) => {
   }
 });
 
+bot.onText(/\/start/, (msg) => {
+  bot.sendMessage(msg.chat.id, 'Открой Mini App:', {
+    reply_markup: {
+      inline_keyboard: [[
+        {
+          text: '🚀 Открыть Peone',
+          web_app: { url: 'https://scintillating-sorbet-ac494e.netlify.app/' }
+        }
+      ]]
+    }
+  });
+});
+
 // Любое сообщение = обновление last_seen
 bot.on('message', async (msg) => {
   await updateLastSeen(msg.from.id);
