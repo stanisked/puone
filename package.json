@@ -1,0 +1,23 @@
+{
+  "name": "peone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "bot": "node telegram-bot/bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "geolib": "^3.3.4",
+    "node-telegram-bot-api": "^0.66.0",
+    "pg": "^8.16.0",
+    "ws": "^8.18.2"
+  }
+}
