@@ -43,10 +43,15 @@ document.getElementById('avatar').addEventListener('change', (e) => {
 // Обработка формы
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-
-  const telegram_id = 123456; // fallback
+  let telegram_id = null; // fallback
   if (window.Telegram && window.Telegram.WebApp) {
-    telegram_id = window.Telegram.WebApp.initDataUnsafe?.user?.id || 123456;
+    const user = window.Telegram.WebApp.initDataUnsafe?.user;
+    telegram_id = user?.id;
+  }
+  
+  if (!telegram_id) {
+    alert("❌ Не удалось получить Telegram ID. Открой Mini App через Telegram.");
+    throw new Error("Telegram ID not found");
   }
   console.log('Telegram ID:', telegram_id);
 
